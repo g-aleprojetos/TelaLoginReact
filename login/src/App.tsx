@@ -5,7 +5,8 @@ import Input from 'component/input'
 const App = () => {
   return (
     <S.Container>
-      <Input />
+      <Input label='email' id='1' placeholder='email'/>
+      <Input label='password' id='2'/>
     </S.Container>
   );
 }
