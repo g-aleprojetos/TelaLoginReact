@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './TelaLoginECadastro.style';
 import Login from './login';
 import Text from 'component/text';
@@ -19,7 +18,7 @@ const TelaLoginECadastro = (props: Props) => {
     return (
         <S.Main>
             <S.Container>
-                <Avatar tipoAvatar={20} />
+                <Avatar tipoAvatar='avatarDefault' />
                 <S.ContainerHeader >
                     <S.ContainerHeaderTexto onClick={() => { }} ativo={true}>
                         <Text

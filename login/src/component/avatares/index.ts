@@ -20,3 +20,4 @@ export * from './avatar17';
 export * from './avatar18';
 export * from './avatar19';
 export * from './avatar20';
+export * from './avatares';
