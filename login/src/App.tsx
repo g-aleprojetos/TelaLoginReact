@@ -1,10 +1,10 @@
 import React from 'react';
 
+import TelaLoginECadastro from 'pages/telaLoginECadastro';
 
 const App = () => {
   return (
-<h1>ola mundo</h1>
+    <TelaLoginECadastro tela='Login' />
   );
-}
-
+};
 export default App;
