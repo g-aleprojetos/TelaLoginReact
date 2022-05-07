@@ -18,7 +18,7 @@ const TelaLoginECadastro = (props: Props) => {
     return (
         <S.Main>
             <S.Container>
-                <Avatar tipoAvatar='avatarDefault' />
+                <Avatar tipoAvatar='avatarAdd' />
                 <S.ContainerHeader >
                     <S.ContainerHeaderTexto onClick={() => { }} ativo={true}>
                         <Text

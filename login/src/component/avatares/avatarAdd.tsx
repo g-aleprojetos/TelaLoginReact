@@ -3,7 +3,7 @@
 export const AvatarAdd = () => {
     return (
         <svg version="1.1" id="Capa_1" x="0px" y="0px"
-            viewBox="0 0 59 59" enable-background="new 0 0 59 59">
+            viewBox="0 0 59 59" enableBackground="new 0 0 59 59">
             <g>
                 <g>
                     <path fill="#ECF0F1" d="M18.613,42.552l-7.907,4.313c-0.464,0.253-0.881,0.564-1.269,0.903
