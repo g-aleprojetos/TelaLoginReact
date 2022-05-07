@@ -1,13 +1,10 @@
 import React from 'react';
-import * as S from './App.style'
-import Input from 'component/input'
+
+import TelaLoginECadastro from 'pages/telaLoginECadastro';
 
 const App = () => {
   return (
-    <S.Container>
-      <Input label='email' id='1' placeholder='email'/>
-      <Input label='password' id='2'/>
-    </S.Container>
+    <TelaLoginECadastro tela='Login' />
   );
-}
+};
 export default App;
