@@ -7,11 +7,11 @@ export interface PropsButton extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const Container = styled.div`
-    margin: 10px;
+    margin: 15px;
 `;
 
 export const ContainerButton = styled.button`
     background-color: ${cores.caribbeanGreen};
     border-radius: 8px;
-    padding: 5px 40px ;
+    padding: 8px 60px ;
 `;

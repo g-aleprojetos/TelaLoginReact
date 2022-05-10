@@ -19,9 +19,10 @@ export const LabelBox = styled.label`
 
 export const InputBox = styled.input`
     height: 30px;
+    margin-top: 5px;
     border-radius: 8px;
     border: 1px solid transparent;
     font-size: 16px;
     background-color: ${cores.shuttleGray};
-    color: #fff;
+    color: ${cores.white};
 `;
