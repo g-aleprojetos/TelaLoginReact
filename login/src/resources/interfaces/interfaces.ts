@@ -19,3 +19,7 @@ export interface IAvatar {
     tipo: string;
     avatar: JSX.Element;
 };
+
+export interface ITipoTela{
+    tipo?: 'Login' | 'Password' | 'Singn Up';
+}

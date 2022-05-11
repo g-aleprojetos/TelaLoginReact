@@ -1,7 +1,7 @@
 import cores from "resources/cores";
 import styled from "styled-components";
 
-export interface PropsTelaLoginECadastro {
+export interface PropsTelaLoginECadastro extends React.AllHTMLAttributes<HTMLElement> {
     tela?: 'Login' | 'Password' | 'Singn Up';
     ativo?: boolean;
 }
@@ -26,7 +26,9 @@ export const Container = styled.div`
 `;
 
 export const ContainerHeader = styled.div`
-    width: 18.75rem;
+    width: 400px;
+    margin-left:15px;
+    margin-right:15px;
     display: flex;
     justify-content: center;
 `;
@@ -36,7 +38,7 @@ export const ContainerHeaderTexto = styled.div<PropsTelaLoginECadastro>`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid ${p => p.ativo === true ? "#fff" : cores.shuttleGray};
+    border-bottom: 2px solid ${p => p.ativo === true ? cores.white : cores.shuttleGray};
 `;
 
 export const TextoRecuperarSenha = styled.div`
