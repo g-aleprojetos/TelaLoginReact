@@ -25,4 +25,5 @@ export const InputBox = styled.input`
     font-size: 16px;
     background-color: ${cores.shuttleGray};
     color: ${cores.white};
+    outline: 0;
 `;

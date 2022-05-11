@@ -1,7 +1,7 @@
 import cores from "resources/cores";
 import styled from "styled-components";
 
-export interface PropsTelaLoginECadastro {
+export interface PropsTelaLoginECadastro extends React.AllHTMLAttributes<HTMLElement> {
     tela?: 'Login' | 'Password' | 'Singn Up';
     ativo?: boolean;
 }
