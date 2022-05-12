@@ -2,7 +2,7 @@ import styled from "styled-components";
 import cores from 'resources/cores';
 
 export interface PropsButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-
+tipo?: 'fechar'| 'cancelar' | 'confirmar';
 
 }
 
@@ -10,8 +10,10 @@ export const Container = styled.div`
     margin: 15px;
 `;
 
-export const ContainerButton = styled.button`
-    background-color: ${cores.caribbeanGreen};
-    border-radius: 8px;
-    padding: 8px 60px ;
+export const ContainerButton = styled.button<PropsButton>`
+    background-color: ${p => p.tipo === 'fechar'? 'transparent' : p.tipo === 'cancelar' || p.tipo ==='confirmar'? cores.shuttleGray: cores.caribbeanGreen};
+    border-radius: ${p => p.tipo === 'fechar'? 'none': '8px'};
+    border-style: none;
+    padding: ${p => p.tipo === 'fechar'? 'none' : '8px 60px' } ;
+    cursor: pointer;
 `;

@@ -8,12 +8,13 @@ type Props = S.PropsButton & {
 
 const Button = (props: Props) => {
     const {
+        tipo,
         children
     } = props;
 
     return (
         <S.Container>
-            <S.ContainerButton>{children}</S.ContainerButton>
+            <S.ContainerButton tipo={tipo}>{children}</S.ContainerButton>
         </S.Container>
     );
 };
