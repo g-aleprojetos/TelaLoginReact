@@ -2,7 +2,7 @@
 
 export const AvatarDefault = () => {
     return (
-        <svg version="1.1" id="Capa_1" x="0px" y="0px"
+        <svg id="avatarDefault" version="1.1" x="0px" y="0px"
             viewBox="0 0 59 59" enableBackground="new 0 0 59 59">
             <g>
                 <g>

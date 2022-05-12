@@ -9,7 +9,7 @@ type Props = S.PropsAvatar & {
 
 const Avatar = (props: Props) => {
     const {
-        tipoAvatar = 'avatarDefault',
+        tipoAvatar,
         tipoPagina = 'login'
     } = props;
 

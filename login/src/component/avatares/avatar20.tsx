@@ -2,7 +2,7 @@
 
 export const Avatar20 = () => {
     return (
-        <svg width="89.0481px" height="89.0481px" viewBox="0 0 89.0481 89.0481" xmlns="http://www.w3.org/2000/svg">
+        <svg id="avatar20" width="100%" height="100%" viewBox="0 0 89.0481 89.0481" xmlns="http://www.w3.org/2000/svg">
             <circle fill="#fff685" cx="44.524" cy="44.524" r="43.524" />
             <path fill="#231f20" fillRule="evenodd" d="M44.524,0A44.5248,44.5248,0,1,1,13.041,13.041,44.3853,44.3853,0,0,1,44.524,0ZM74.5931,14.455A42.5243,42.5243,0,1,0,87.048,44.524,42.3915,42.3915,0,0,0,74.5931,14.455Z" />
             <ellipse fill="#231f20" cx="25.1665" cy="36.0184" rx="7.0872" ry="6.6779" />

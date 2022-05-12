@@ -34,10 +34,21 @@ border-radius: 20px 20px 0px 0px;
 export const Body = styled.div`
 height: 350px;
 margin: 0px 10px 0px 10px;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+justify-content: center;
+align-items: center;
+justify-items: center;
 border-top: 2px solid ${cores.shuttleGray};
 border-bottom: 2px solid ${cores.shuttleGray};
+`;
 
-
+export const BodyContent = styled.div`
+width: 70px;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
 `;
 
 export const Footer = styled.div`
