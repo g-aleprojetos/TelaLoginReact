@@ -10,10 +10,12 @@ export interface PropsTelaLoginECadastro extends React.AllHTMLAttributes<HTMLEle
 export const Main = styled.div`
     width: 100vw;
     height: 100vh;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: ${cores.caribbeanGreen};  
+    
 `;
 
 export const Container = styled.div`
@@ -23,6 +25,17 @@ export const Container = styled.div`
     background-color: ${cores.mineShaft};
     border-radius: 20px;
     box-shadow: 0px 30px 80px 3px black;
+    
+`;
+
+export const ContentAvatar = styled.div`
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    top: -50px;
+    cursor: pointer;
+    
 `;
 
 export const ContainerHeader = styled.div`
@@ -31,6 +44,7 @@ export const ContainerHeader = styled.div`
     margin-right:15px;
     display: flex;
     justify-content: center;
+    
 `;
 
 export const ContainerHeaderTexto = styled.div<PropsTelaLoginECadastro>`
@@ -39,8 +53,10 @@ export const ContainerHeaderTexto = styled.div<PropsTelaLoginECadastro>`
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid ${p => p.ativo === true ? cores.white : cores.shuttleGray};
+    
 `;
 
 export const TextoRecuperarSenha = styled.div`
     margin-bottom: 20px;
 `;
+

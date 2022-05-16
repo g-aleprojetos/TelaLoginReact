@@ -21,5 +21,13 @@ export interface IAvatar {
 };
 
 export interface ITipoTela{
-    tipo?: 'Login' | 'Password' | 'Singn Up';
+    tipo?: 'Login' | 'Password' | 'Singn Up' | 'Modal';
+}
+
+export interface ILoginCadastro{
+    avatar?: string,
+    name?: string,
+    email: string,
+    password?: string,
+    Confirmpassword?: string,
 }
