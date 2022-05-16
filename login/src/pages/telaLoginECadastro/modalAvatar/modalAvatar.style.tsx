@@ -1,33 +1,14 @@
 import cores from "resources/cores";
 import styled from "styled-components";
 
+export interface PropsModalAvatar{
+    chosen?: boolean;
+}
 
 
 
 export const Container = styled.div`
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: rgba(0, 0, 0, 0.2);
-`;
-
-export const ContainerContent = styled.div`
 width: 700px;
-height: 500px;
-border-radius: 20px;
-box-shadow: 0px 30px 80px 3px black;
-background-color: ${cores.lightgray};
-`
-
-export const Header = styled.div`
-height: 50px;
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-padding-left: 20px;
-border-radius: 20px 20px 0px 0px;
 
 `;
 
@@ -36,25 +17,19 @@ height: 350px;
 margin: 0px 10px 0px 10px;
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
 justify-content: center;
 align-items: center;
 justify-items: center;
-border-top: 2px solid ${cores.shuttleGray};
-border-bottom: 2px solid ${cores.shuttleGray};
 `;
 
-export const BodyContent = styled.div`
-width: 70px;
-height: 70px;
+export const BodyContent = styled.div<PropsModalAvatar>`
+width: ${p => p.chosen ? '75px' : '70px'};
+height: ${p => p.chosen ? '75px' : '70px'};
+border-radius: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+box-shadow:${p => p.chosen ? `0px 0px 20px ${cores.red}` : 'none'};
 `;
 
-export const Footer = styled.div`
-height: 80px;
-border-radius: 0px 0px 20px 20px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-`;

@@ -4,27 +4,30 @@ import * as A from '../avatares';
 
 
 type Props = S.PropsAvatar & {
-    tipoAvatar?: string;
+   avatarModal?: string;
 };
 
 const Avatar = (props: Props) => {
-    const {
-        tipoAvatar,
-        tipoPagina = 'login'
+    const {     
+        tipoPagina,
+        avatarModal = "",
     } = props;
 
     const [avatar, setAvatar] = useState(<A.AvatarDefault /> as JSX.Element);
+    const [tipoAvatar, setTipoAvatar] = useState("");
+    
 
     useEffect(() => {
+        setTipoAvatar(avatarModal ? avatarModal : tipoPagina === 'Singn Up'? 'avatarAdd' : 'avatarDefault');
         let _avatar = A.Avatares.find(x => x.tipo === tipoAvatar);
         if (_avatar) setAvatar(_avatar.avatar);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [tipoAvatar]);
+    }, [tipoPagina, tipoAvatar, avatarModal]);
 
 
     return (
-        <S.Container tipoPagina={tipoPagina} onClick={() => { }}>
+        <S.Container tipoPagina={tipoPagina} >
             {avatar}
         </S.Container>
     );

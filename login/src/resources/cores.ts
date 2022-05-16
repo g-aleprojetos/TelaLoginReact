@@ -4,5 +4,6 @@ export default {
     mineShaft: '#2e3137',
     shuttleGray: '#545d6a',    
     lightgray:'#d3d3d3',
-    white:'#ffffff'
+    white:'#ffffff',
+    red:'#ff0000'
 };

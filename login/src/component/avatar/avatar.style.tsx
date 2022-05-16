@@ -1,7 +1,10 @@
+import cores from "resources/cores";
+import { ITipoTela } from "resources/interfaces";
 import styled from "styled-components";
 
 export interface PropsAvatar {
-    tipoPagina?: 'cadastro' | 'login'| 'modal';
+    tipoPagina?: ITipoTela;
+
 }
 
 
@@ -10,8 +13,7 @@ export interface PropsAvatar {
 export const Container = styled.div<PropsAvatar>`
 width: 100%;
 height: 100%;
-position: relative;
-top: ${p => p.tipoPagina === 'login' || p.tipoPagina === 'cadastro' ? '-50px' : 'none'};//;
+border-radius: 100%;
 cursor: ${p => p.tipoPagina === 'login' ? 'default' : 'pointer'};
 
 `;

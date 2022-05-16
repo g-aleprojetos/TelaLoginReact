@@ -4,44 +4,44 @@ import * as S from './modalAvatar.style'
 import * as A from 'component/avatares';
 import Text from 'component/text';
 import Avatar from "component/avatar";
+import { ITipoTela } from "resources/interfaces";
+import cores from "resources/cores";
 
-const ModalAvatar = () => {
+export type Props = S.PropsModalAvatar & {
+    title?: string;
+}
+
+
+
+const ModalAvatar = (props: Props) => {
+
+    const {
+        title = " ",
+    } = props;
 
     const [avatares, setAvatares] = useState([] as string[]);
+    const [select, setSelect] = useState<string>();
 
-    useEffect(()=>{
-    for (let i = 1; i <= A.Avatares.length; i++) {
-        let _avatar = A.Avatares.find(x => x.tipo === `avatar${i}`);
-        if (_avatar) setAvatares((listaAvatar: any) => ([...listaAvatar, _avatar?.tipo]));     
-    }
-    },[]);
+
+    useEffect(() => {
+        for (let i = 1; i <= A.Avatares.length; i++) {
+            let _avatar = A.Avatares.find(x => x.tipo === `avatar${i}`);
+            if (_avatar) setAvatares((listaAvatar: any) => ([...listaAvatar, _avatar?.tipo]));
+        }
+    }, []);
 
     return (
-        <S.Container>
-            <S.ContainerContent>
-                <S.Header>
-                    <Text
-                        fontSize='20px'
-                        peso='bold'
-                    >Escola seu Avatar</Text>
-                    <Button
-                        tipo='fechar'
-                    ><Text fontSize='20px' peso='bold' cursor='pointer'>X</Text></Button>
-                </S.Header>
-                <S.Body>
-                   
-                      {avatares.map((avatar,key) =>( 
-                          
-                      <S.BodyContent key={key.toString()}>
-                          <Avatar tipoAvatar={avatar} tipoPagina='modal'/>
-                      </S.BodyContent>  ))} 
-                                                    
-                </S.Body>
-                <S.Footer>
-                    <Button tipo='confirmar'><Text fontSize='18px' peso='bold'>OK</Text></Button>
-                    <Button tipo='cancelar'><Text fontSize='18px' peso='bold'>Cancelar</Text></Button>
-                </S.Footer>
-            </S.ContainerContent>
+        <S.Container >
+            <S.Body>
+                {avatares.map((avatar, key) => (
+                    <S.BodyContent
+                        key={key.toString()}
+                        id={`avatar${(key + 1).toString()}`}
+                        chosen={`avatar${(key + 1).toString()}` === select ? true : false}
+                        onClick={() => { setSelect(`avatar${(key + 1).toString()}`) }}>
+                        <Avatar avatarModal={avatar} tipoPagina={'Modal' as ITipoTela} />
+                    </S.BodyContent>))}
+            </S.Body>
         </S.Container>
     );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export interface PropsFormulario{
+export interface PropsFormulario extends React.FormHTMLAttributes<HTMLFormElement>{
     
 }
 
@@ -10,4 +10,6 @@ padding-left: 20px;
 padding-right: 20px;
 `;
 
+export const Form = styled.form`
 
+`
