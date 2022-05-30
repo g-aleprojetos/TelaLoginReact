@@ -23,15 +23,19 @@ const TelaLoginECadastro = (props: Props) => {
     const [tipoTela, setTipoTela] = useState('Login' as ITipoTela);
     const [isShow, setIsShow] = useState(false);
     const [loginCadastro, setLoginCadastro] = useState<ILoginCadastro>({avatar:"",name:"", email:"", password:"", Confirmpassword:""});
-    
+    const [select, setSelect] = useState<string>();
 
     const handleSubmit = useCallback((event: React.FormEvent<HTMLFormElement>)=>{
 
     },[])
 
+    const handleEscolherAvatar = () =>{
+        setLoginCadastro({...loginCadastro,avatar: select})
+    }
+
     const handleModal = () => {
         if (tipoTela !== 'Login') setIsShow(!isShow);
-    }
+    }   
 
     useEffect(()=>{
         console.log(loginCadastro)
@@ -43,7 +47,7 @@ const TelaLoginECadastro = (props: Props) => {
             <S.Main>
                 <S.Container>
                     <S.ContentAvatar onClick={() => { handleModal(); }}>
-                        <Avatar tipoPagina={tipoTela} />
+                        <Avatar tipoPagina={tipoTela} handleTipoAvatar={loginCadastro.avatar}/>
                     </S.ContentAvatar>
                     <S.ContainerHeader >
                         <S.ContainerHeaderTexto
@@ -91,9 +95,11 @@ const TelaLoginECadastro = (props: Props) => {
             {isShow === true ?
                 <Modal isShow={isShow}
                     title='Escolha seu Avatar'
-                    handleModal={() => { handleModal(); }}>
-                    <ModalAvatar />
-
+                    handleModal={() => { handleModal(); }}
+                    handleConfirmar={()=>{handleEscolherAvatar(); handleModal();}}>
+                    <ModalAvatar
+                    handleSelect = {select}
+                    handleSetSelect = {(event:string)=>{setSelect(event)}} />
                 </Modal> : null}
         </>
     );

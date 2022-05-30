@@ -10,7 +10,9 @@ type Props = S.PropsModal & {
     title?: string;
     children?: React.ReactNode;
     handleFooterButton?: 'ok' | 'confirm/cancel';
-    handleModal: () => void;
+    handleModal: () => void;   
+    handleConfirmar?: ()=>void;
+    handleOK?: ()=>void;
 }
 
 const Modal = (props: Props) => {
@@ -21,6 +23,8 @@ const Modal = (props: Props) => {
         children,
         handleFooterButton = 'confirm/cancel',
         handleModal,
+        handleConfirmar,
+        handleOK,
     } = props
 
 
@@ -41,7 +45,7 @@ const Modal = (props: Props) => {
                     <S.Body>{children}</S.Body>
                     <S.Footer>
                         {handleFooterButton === 'ok' ?
-                            <Button tipo='ok' handleOnClick={() => { console.log('ok') }}>
+                            <Button tipo='ok' handleOnClick={() => {if(handleOK !== undefined)handleOK()}}>
                                 <Text
                                     fontSize='18px'
                                     peso='bold'
@@ -51,7 +55,7 @@ const Modal = (props: Props) => {
                             </Button>
                             :
                             <>
-                                <Button tipo='confirmar' handleOnClick={() => { console.log('confirmar') }}>
+                                <Button tipo='confirmar' handleOnClick={() => {if(handleConfirmar !== undefined) handleConfirmar() }}>
                                     <Text
                                         fontSize='18px'
                                         peso='bold'
