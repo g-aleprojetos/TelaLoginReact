@@ -32,6 +32,7 @@ const ModalAvatar = (props: Props) => {
         }
     }, []);
 
+
     return (
         <S.Container >
             <S.Body>

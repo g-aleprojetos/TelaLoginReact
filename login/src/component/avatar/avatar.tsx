@@ -13,7 +13,7 @@ const Avatar = (props: Props) => {
         handleTipoAvatar = "",
     } = props;
 
-    const [avatar, setAvatar] = useState(<A.AvatarDefault /> as JSX.Element);
+    const [avatar, setAvatar] = useState(<A.Avatar1 /> as JSX.Element);
     const [tipoAvatar, setTipoAvatar] = useState("");
     
 

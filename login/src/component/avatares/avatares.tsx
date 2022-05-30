@@ -1,9 +1,8 @@
 import { IAvatar } from 'resources/interfaces';
 import * as S from './index';
 
-export const Avatares: IAvatar[] = [
-    { tipo: 'avatarDefault', avatar: <S.AvatarDefault /> },
-    { tipo: 'avatarAdd', avatar: <S.AvatarAdd /> },
+export const Avatares: IAvatar[] = [    
+    { tipo: 'avatarAdd', avatar: <S.AvatarAdd /> },   
     { tipo: 'avatar1', avatar: <S.Avatar1 /> },
     { tipo: 'avatar2', avatar: <S.Avatar2 /> },
     { tipo: 'avatar3', avatar: <S.Avatar3 /> },
@@ -24,4 +23,5 @@ export const Avatares: IAvatar[] = [
     { tipo: 'avatar18', avatar: <S.Avatar18 /> },
     { tipo: 'avatar19', avatar: <S.Avatar19 /> },
     { tipo: 'avatar20', avatar: <S.Avatar20 /> },
+    { tipo: 'avatar21', avatar: <S.Avatar21 /> },
 ];

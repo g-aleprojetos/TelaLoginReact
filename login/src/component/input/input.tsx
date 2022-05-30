@@ -26,6 +26,7 @@ const Input = (props: Props) => {
             value={value}
             required = {requered === true ? true : false}
             onChange={(event)=>{handleOnchange(event.currentTarget?.value)}}
+            {...props}
             />
         </S.ContainerInput>
     );

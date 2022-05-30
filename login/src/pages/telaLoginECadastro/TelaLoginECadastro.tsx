@@ -30,10 +30,11 @@ const TelaLoginECadastro = (props: Props) => {
     },[])
 
     const handleEscolherAvatar = () =>{
-        setLoginCadastro({...loginCadastro,avatar: select})
+        setLoginCadastro({...loginCadastro,avatar: select});
     }
 
     const handleModal = () => {
+        setSelect("");
         if (tipoTela !== 'Login') setIsShow(!isShow);
     }   
 
