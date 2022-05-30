@@ -24,8 +24,8 @@ const Formulario = (props: Props) => {
             <S.Form autoComplete="off" onSubmit={handleSubmit} >
                 {tela === 'Singn Up' ? <Input label='name' id='3' value={handleLoginCadastro?.name} handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, name:event}) } /> : null}
                 <Input label='email' id='1' value={handleLoginCadastro?.email} handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, email:event}) }/>
-                {tela !== 'Password' ? <Input label='senha' id='2' value={handleLoginCadastro?.password} handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, password:event}) }/> : null}
-                {tela === 'Singn Up' ? <Input label='confirmar senha' id='4' handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, Confirmpassword:event}) } /> : null}
+                {tela !== 'Password' ? <Input label='senha' id='2' type='password' value={handleLoginCadastro?.password} handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, password:event}) }/> : null}
+                {tela === 'Singn Up' ? <Input label='confirmar senha' id='4' type='text' handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, Confirmpassword:event}) } /> : null}
             </S.Form>
         </S.Container>
     );

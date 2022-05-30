@@ -1,4 +1,3 @@
-export * from './avatarDefault';
 export * from './avatarAdd';
 export * from './avatar1';
 export * from './avatar2';
@@ -20,4 +19,5 @@ export * from './avatar17';
 export * from './avatar18';
 export * from './avatar19';
 export * from './avatar20';
+export * from './avatar21';
 export * from './avatares';
