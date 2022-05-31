@@ -1,4 +1,5 @@
 import Input from "component/input";
+import ToggleSwitch from "component/switch";
 import { ITipoTela } from "resources/interfaces";
 import { ILoginCadastro } from "resources/interfaces";
 import * as S from "./formulario.style"
@@ -26,6 +27,7 @@ const Formulario = (props: Props) => {
                 <Input label='email' id='1' value={handleLoginCadastro?.email} handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, email:event}) }/>
                 {tela !== 'Password' ? <Input label='senha' id='2' type='password' value={handleLoginCadastro?.password} handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, password:event}) }/> : null}
                 {tela === 'Singn Up' ? <Input label='confirmar senha' id='4' type='text' handleOnchange={(event)=> handleSetLoginCadastro({...handleLoginCadastro, Confirmpassword:event}) } /> : null}
+                {tela === 'Login' ? <ToggleSwitch handlelabel={"Mostrar senha"}/> : null}
             </S.Form>
         </S.Container>
     );

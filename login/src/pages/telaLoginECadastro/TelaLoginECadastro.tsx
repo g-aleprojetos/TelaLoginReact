@@ -9,6 +9,7 @@ import { ITipoTela } from 'resources/interfaces';
 import ModalAvatar from './modalAvatar';
 import Modal from 'component/modal';
 import { ILoginCadastro } from 'resources/interfaces';
+import { Avatar1, Avatares } from 'component/avatares';
 
 type Props = S.PropsTelaLoginECadastro & {
 
@@ -48,7 +49,7 @@ const TelaLoginECadastro = (props: Props) => {
             <S.Main>
                 <S.Container>
                     <S.ContentAvatar onClick={() => { handleModal(); }}>
-                        <Avatar tipoPagina={tipoTela} handleTipoAvatar={loginCadastro.avatar}/>
+                        <Avatar tipoPagina={tipoTela} handleTipoAvatar={tipoTela === 'Login' ? 'avatar1' : loginCadastro.avatar}/>
                     </S.ContentAvatar>
                     <S.ContainerHeader >
                         <S.ContainerHeaderTexto

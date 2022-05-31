@@ -5,7 +5,7 @@ type Props = S.PropsInput & {
     label?: string;
     value?: string;
     requered?: boolean;
-    handleOnchange: ((event:string)=>void);
+    handleOnchange?: ((event:string)=>void);
 };
 
 const Input = (props: Props) => {
@@ -25,7 +25,7 @@ const Input = (props: Props) => {
             id={id} 
             value={value}
             required = {requered === true ? true : false}
-            onChange={(event)=>{handleOnchange(event.currentTarget?.value)}}
+            onChange={(event)=>{if(handleOnchange !== undefined) handleOnchange(event.currentTarget?.value)}}
             {...props}
             />
         </S.ContainerInput>
